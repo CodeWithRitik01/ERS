@@ -1,0 +1,60 @@
+.assignHead{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.assignMain{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.sub1{
+    height: 300px;
+    width: 500px;
+    background-color: azure;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.sub1 button{
+  margin-left: 200px;
+  height: 30px;
+  width: 100px;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, rgb(46, 48, 47), #a5a3a5); 
+  color:aqua;
+
+}
+
+.toReview{
+    margin-left: 150px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.toReview select {
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+}
+
+.toReview span{
+    margin-left: 20px;
+}
+
+.toReceive{
+    margin-left: 150px;
+    font-size: 20px;
+    margin-bottom: 30px;
+
+}
+
+.toReceive select{
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+
+}

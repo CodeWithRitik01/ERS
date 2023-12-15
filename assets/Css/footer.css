@@ -1,0 +1,8 @@
+#footer{
+    background-color: grey;
+    padding: 5px 10px;
+    display: flex;
+    position: relative;
+    height: 50px;
+    top:100vh;
+}

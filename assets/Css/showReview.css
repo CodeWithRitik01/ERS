@@ -1,0 +1,31 @@
+.head{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+
+}
+
+.heading{
+    display: flex;
+    margin-left: 200px;
+
+}
+
+
+.heading h1{
+    margin-right: 270px;
+}
+
+.list{
+    list-style-type:lower-roman;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px;
+  
+}
+
+.items{
+    margin-bottom: 50px;
+    margin-right: 40px;
+}
+

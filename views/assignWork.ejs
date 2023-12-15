@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="/Css/assignWork.css">
+<h1 class="assignHead">Assign Employee To Review</h1>
+
+<div class="assignMain">
+
+    <div class="sub1">
+        <h2 style="margin-left: 200px; font-size: 25px;">Assign Task</h2>
+    
+
+    <form  action="/admin/assign" method="post">
+         <div class="toReview">
+            <span>Employee To Review</span> <br>
+            <select  name="sender">
+                 <option selected>
+                      Review Sender
+                 </option>
+
+                 <% for(let i = 0; i<employee.length; i++){ %>
+                    <option value="<%= employee[i].id%>"> <%= employee[i].name %></option>
+                 <% } %>
+            </select>
+         </div>
+     
+
+         <div class="toReceive">
+            <span>Set Employee To receive Review</span><br>
+            <select name="receiver">
+                 <option selected>
+                      Review Receiver
+                 </option>
+
+                 <% for(let i = 0; i<employee.length; i++){ %>
+                    <option value="<%= employee[i].id%>"> <%= employee[i].name %></option>
+                 <% } %>
+            </select>
+         </div>
+
+         <button  type="submit">Submit</button>
+    </form>
+    </div>
+
+
+     <div class="sub1" style="height: 200px;">
+          <h2 style="margin-left: 200px; font-size: 25px;">Make Admin</h2>
+          <div class="toReview">
+               <form action="/admin/newAdmin" method="post">
+                    <select style="margin-bottom: 40px; margin-left: 20px;" name="newAdmin">
+                         <option selected>
+                              Choose new Admin
+                         </option>
+        
+                         <% for(let i = 0; i<employee.length; i++){ %>
+                            <option value="<%= employee[i].id%>"> <%= employee[i].name %></option>
+                         <% } %>
+                    </select>
+                    <div>
+                         <button type="submit" style="margin-left: 70px;">Submit</button>
+                    </div>
+
+               </form>
+             
+          </div>
+
+     </div>
+
+
+
+     <div class="sub1" style="height: 200px;">
+          <h2 style="margin-left: 180px; font-size: 25px;">Remove As Admin</h2>
+          <div class="toReview">
+               <form action="/admin/removeAdmin" method="post">
+                    <select style="margin-bottom: 40px; margin-left: 20px;" name="removeAdmin">
+                         <option selected>
+                              Choose Employee
+                         </option>
+        
+                         <% for(let i = 0; i<employee.length; i++){ %>
+                            <option value="<%= employee[i].id%>"> <%= employee[i].name %></option>
+                         <% } %>
+                    </select>
+                    <div>
+                         <button type="submit" style="margin-left: 70px;">Submit</button>
+                    </div>
+
+               </form>
+             
+          </div>
+
+     </div>
+</div>

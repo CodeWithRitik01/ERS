@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/Css/employeeList.css">
+<h1> EMPLOYEE's LIST</h1>
+
+<div class="heading">
+    <h2>S.no</h2>
+    <h2>Name</h2>
+    <h2 style="margin-right: 100px;">Email</h2>
+    <h2>Password</h2>
+    <h2>Admin</h2>
+    <h2>Delete</h2>
+</div>
+<ul>
+    <% for(let i = 0; i<employee.length; i++){%>
+         <li class="empList">
+           <span><%=i+1%></span> 
+            <span><%= employee[i].name %></span>
+            <span style="margin-right:150px;"><%= employee[i].email %></span>
+            <span><%= employee[i].password %></span>
+            <span><%= employee[i].isAdmin %></span>
+            <span class="button" style="margin-left: 40px;"><a href="/admin/delete/<%=employee[i]._id%>">Remove</a></span>
+            
+            
+         </li>
+        <%}%> 
+</ul>

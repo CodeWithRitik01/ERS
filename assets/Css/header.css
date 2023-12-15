@@ -1,0 +1,63 @@
+
+#header{
+    top:0px;
+    display: flex;
+    height:50px;
+    width: 100%;
+    border: 1px solid black;
+    color: black;
+    position: fixed;
+    background-color:white;
+    margin-top: 0px;
+    box-shadow: 1px 1px 1px 1px black;
+    text-decoration: none;
+
+
+}
+#header img{
+    height:50px;
+    width:50px;
+}
+#header h1{
+    margin-top:10px;
+}
+
+ a{
+  text-decoration: none;
+  color:black;
+}
+
+
+.auth-links ul  {
+    margin: 5% 5px;
+    display: flex;
+    color:black;
+    position: absolute;
+    left:50%;
+    top:-140%;
+    
+}
+
+.headLink{
+    list-style-type: none;
+    margin-left: 20px;
+    border:1px solid black;
+    border-radius: 50px;
+    height:30px;
+    width:120px;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(183, 173, 194), rgb(158, 201, 213)); 
+    text-align: center;
+    box-shadow: 0px 5px 5px 0px;
+   
+}
+
+.make_admin{
+    display: flex;
+    position: absolute;
+    left: -100%;
+}
+
+.adminPov{
+  color:rgb(23, 92, 35)
+}

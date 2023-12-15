@@ -1,0 +1,16 @@
+body{
+    background-image: url('/images/360_F_447703874_ZE3jgQw2nUShvBG7b5qmNdXR6aIraxOo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+#opener h1{
+    position: fixed;
+    color: rgb(255, 255, 255);
+    left: 4rem;
+    top: 8rem;
+    padding: 0 1rem;
+    font-size: 80px;
+
+}

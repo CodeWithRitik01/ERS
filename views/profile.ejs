@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/Css/profile.css">
+
+<h1 class="profileHead"><%= user.name %></h1>
+
+<% if(recipent.length != 0){ %>
+     <h1 class="profileHead">Please give review to your colleague - ADMIN</h1>
+<% } %>
+
+
+
+<div id="main">
+     <% if(recipent.length != 0){ %>
+    <div class="giveReview">
+         <% for(let i = 0; i<recipent.length; i++){ %>
+              <% if(recipent[i] !=null){ %>
+                <div class="sub1">
+                     <h4>To : <%= recipent[i].name%></h4>
+
+                     <div class="feedback">
+                           <form action="/review/setReview/<%=recipent[i]._id%>" method="post">
+                                 <textarea type="text" name="setReview" rows="5" cols="80" placeholder="Share Review">
+                                  
+                                 </textarea><br>
+                                 <button type="submit">Submit</button>
+                           </form>
+                     </div>
+                </div>
+              <%}%>
+         <%}%>
+    </div>
+    <% } %>
+
+    <div class="gotReview">
+     <% if(reviews.length != 0){ %>
+          <h3 style="font-size: 20px;">Reviews Received</h3> 
+          <%} %>
+
+          <div>
+            
+                    <% for(let i = 0; i< reviews.length; i++){ %>
+                         <%= i+1 %>.
+                         <span>Feedback : <%= reviews[i].content %></span>
+                         <p>From : <%= reviews[i].name %></p>
+                      <%}%>
+              
+              
+          </div>
+    </div>
+</div>

@@ -1,0 +1,86 @@
+
+<div id="header">
+    <img src="\images\images (1).png">
+    <a href="/"><h1>ERS</h1></a>
+
+    
+
+    <div class="auth-links">
+        <ul>
+            <% if(locals.user){ %>
+                <% if(!locals.user.isAdmin){%>
+                  <span style="margin-left: 600px;" class="make_admin" >
+                    <form action="/users/makeAdmin" method="post">
+                        <input type="password" name="admin_password" placeholder="password">
+                        <button type="submit">Enter as Admin</button>
+                    </form>
+                </span>
+               
+                <a style="margin-left: 300px;" href="/users/profile/<%= locals.user.id%>">
+                    <li class="headLink">
+                      <%= user.name %>
+                    </li>
+                </a>
+               
+              
+                <a href="/users/logout">  
+                    <li class="headLink">
+                        Sign Out
+
+                    </li>
+                </a>
+                
+                <%}else{%>
+                    <a class="adminPov" href="/admin/assignWork">
+                        <li class="headLink">                           
+                            Assign work                           
+                        </li>
+                    </a>
+
+                    <a class="adminPov" href="/admin/employee">
+                        <li class="headLink">
+                            Employees                        
+                        </li>
+                    </a>
+
+                    <a class="adminPov" href="/admin/showReview">
+                        <li class="headLink">                        
+                            All Reviews                          
+                        </li>
+                    </a>
+               
+                    <a href="/users/profile/<%= locals.user.id%>" style="height:30px">
+                      <li class="headLink">
+                      <%= user.name %>
+                      </li>
+                    </a>
+                
+                
+                   <a href="/users/logout">
+                    <li class="headLink">
+                    Sign Out
+                    </li>
+                    </a>
+                
+                <%}%>
+             <%} else{ %>
+        
+                
+                    <a href="/users/sign_in">
+                        <li style="margin-left: 300px;" class="headLink">
+                        Sign In
+                        </li>
+                    </a>
+              
+                    <a href="/users/sign_up" class="headLink">
+                        <li>
+                            Sign Up
+                        </li>
+                    </a>
+               
+         
+            <%}%>
+
+        </ul>
+    </div>
+</div>

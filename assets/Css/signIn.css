@@ -1,0 +1,44 @@
+.main{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    margin:100px
+}
+
+#mainIN{
+    height: 300px;
+    width: 500px;
+    background-color: azure;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#mainIN form label{
+    margin-left: 60px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#mainIN form input{
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+}
+
+#mainIN button{
+    margin-left: 200px;
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgb(46, 48, 47), #a5a3a5); 
+    color:aqua;
+}
+
+#mainIN button:hover{
+    cursor: pointer;
+}

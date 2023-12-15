@@ -1,0 +1,44 @@
+#main{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profileHead{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.giveReview{
+    height: 350px;
+    width: 700px;
+    background-color: azure;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    
+}
+
+.sub1{
+    margin-left: 60px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sub1 h4{
+    font-size: 30px;
+    margin-left: 100px;
+}
+
+.feedback textarea{
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.feedback button{
+    margin-left: 200px;
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgb(46, 48, 47), #a5a3a5); 
+    color:aqua;
+}
