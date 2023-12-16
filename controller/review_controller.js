@@ -1,6 +1,8 @@
 const User  = require('../model/user');
 const Review = require('../model/review');
 
+
+//employee giving review to other employee function
 module.exports.setReview = async function(req, res){
     try{
         let recipent = await User.findById(req.params.id);

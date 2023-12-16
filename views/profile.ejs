@@ -10,8 +10,10 @@
 
 <div id="main">
      <% if(recipent.length != 0){ %>
-    <div class="giveReview">
+       <ul>
          <% for(let i = 0; i<recipent.length; i++){ %>
+          <li style="list-style: none;">
+          <div class="giveReview">
               <% if(recipent[i] !=null){ %>
                 <div class="sub1">
                      <h4>To : <%= recipent[i].name%></h4>
@@ -26,8 +28,10 @@
                      </div>
                 </div>
               <%}%>
+          </div>
+          </li>
          <%}%>
-    </div>
+     </ul>
     <% } %>
 
     <div class="gotReview">

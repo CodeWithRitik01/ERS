@@ -2,6 +2,8 @@ const User  = require('../model/user');
 const Review = require('../model/review');
 
 
+
+//function to show profile page who is logged in
 module.exports.profile = async function(req, res){
     try{
         if(!req.isAuthenticated){
@@ -30,7 +32,6 @@ module.exports.profile = async function(req, res){
             }
         }
 
-             console.log(review);
         return res.render('profile',{
             title: "profile",
            user: user,
@@ -41,13 +42,9 @@ module.exports.profile = async function(req, res){
         console.log(err, "error in profile");
         return res.redirect('back');
     }
-    
-      
-
-
-
-
 }
+
+//redirect to signup page
 module.exports.signUp = async function(req, res){
     if(req.isAuthenticated()){
         return res.redirect('/users/profile');
@@ -57,6 +54,8 @@ module.exports.signUp = async function(req, res){
     });
 }
 
+
+//redirect to signin page
 module.exports.signIn = async function(req, res){
     if(req.isAuthenticated()){
         return res.redirect('/users/profile');
@@ -66,6 +65,9 @@ module.exports.signIn = async function(req, res){
     });
 }
 
+
+
+//to create a employee 
 module.exports.create = async function(req, res){
     try{
         if(req.body.password != req.body.confirm_password){
@@ -82,7 +84,6 @@ module.exports.create = async function(req, res){
                 password: req.body.password,
                 isAdmin:false
             });
-            console.log('New use created', newUser);
             return res.redirect('/users/sign_in');
         }else{
             console.log('User already exists:', existingUser);
@@ -95,28 +96,18 @@ module.exports.create = async function(req, res){
   
 }
 
+
+//login funtion
 module.exports.createSession = async function(req, res){
-    // try{
-    //     const existingUser = await User.findOne({email: req.body.email});
-    //     if(existingUser){
-    //         if(existingUser.password != req.body.password){
-    //             return res.redirect('back');
-    //         }
-    //         res.cookie('user_id', existingUser.id);
-    //         return res.redirect('/users/profile');
-    //     }else{
-    //         return res.redirect('back');
-    //     }
-    // }catch(err){
-    //     console.error('Error in user creation:', err);
-    //     return res.status(500).send('Internal Server Error');
-    // }
-    // console.log('it is')
+  
     req.flash('success', 'You are logged In');
 
     return res.redirect('/');
 }
 
+
+
+//sign out function
 module.exports.destroySession = async function(req, res, next){
     req.logout(function(err){
         if(err){return next(err);}
@@ -127,6 +118,9 @@ module.exports.destroySession = async function(req, res, next){
     });
 }
 
+
+
+//function by which any employee can be admin if he knows password
 module.exports.makeAdmin = async function(req, res){
     try{
         if(req.body.admin_password == "password"){

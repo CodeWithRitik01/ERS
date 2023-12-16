@@ -1,5 +1,7 @@
 const User = require('../model/user');
 
+
+//home page
 module.exports.home = async function(req, res){
     const user = await User.find({});
 

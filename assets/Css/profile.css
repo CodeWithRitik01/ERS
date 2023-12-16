@@ -10,13 +10,14 @@
 }
 
 .giveReview{
-    height: 350px;
+    height: 300px;
     width: 700px;
     background-color: azure;
     border-radius: 20px;
     margin-bottom: 50px;
     
-}
+    
+} 
 
 .sub1{
     margin-left: 60px;
