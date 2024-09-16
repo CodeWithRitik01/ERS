@@ -10,7 +10,7 @@
 ![Screenshot (292)](https://github.com/CodeWithRitik01/toDoList/assets/141724500/7a453351-3497-4e97-ae87-a9d40ae075d9)
 
 
-In this Project Employee Review System, there is employees in the app who are supposed to review the other employees and the task to review is going to be assign by the admin and have some more powers like he can see all employees list , can remove any of the employee from ERS, can see each review and who is reviewer and who is review reciver , can make others admin and can remove as an admin.
+In this Project Employee Review System, there is employees in the app who are supposed to review the other employees and the task to review, is going to be assign by the admin and have some more powers like he can see all employees list , can remove any of the employee from ERS, can see each review and who is reviewer and who is review receiver , can make other employee admin and can remove as an admin.
 
 
 ## Deployment
